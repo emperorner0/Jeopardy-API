@@ -67,7 +67,7 @@ After using a POST request to upload these CSV users can then search via monetar
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| round / category      | String / String|Returns a list of all questions within a given categroy.
+| round / category      | String / String|Returns a list of all questions within a given category.
 
 #### Delete question by ID
 
