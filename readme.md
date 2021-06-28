@@ -29,6 +29,16 @@ After using a POST request to upload these CSV users can then search via monetar
 | :-------- | :------- | :-------------------------------- |
 | None      | N/A |Returns a list of all questions uploaded to the JPA repository.
 
+#### Get question by ID
+
+```http
+  GET /api/items/getQuestionByValue/{id}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| ID      | Integer |Returns the question associated with a given ID.
+
 #### Get question by value
 
 ```http
