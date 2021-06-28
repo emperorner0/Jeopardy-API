@@ -12,7 +12,7 @@ After using a POST request to upload these CSV users can then search via monetar
 #### Upload Questions
 
 ```http
-  POST /api/CSV/upload
+  POST /api/csv/v1/upload
 ```
 
 | Parameter | Type     | Description                |
@@ -22,7 +22,7 @@ After using a POST request to upload these CSV users can then search via monetar
 #### Get all questions
 
 ```http
-  GET /api/items/questions
+  GET /api/csv/v1/questions
 ```
 
 | Parameter | Type     | Description                       |
@@ -32,7 +32,7 @@ After using a POST request to upload these CSV users can then search via monetar
 #### Get question by ID
 
 ```http
-  GET /api/items/getQuestionByValue/{id}
+  GET /api/csv/v1/getQuestionByValue/{id}
 ```
 
 | Parameter | Type     | Description                       |
@@ -42,7 +42,7 @@ After using a POST request to upload these CSV users can then search via monetar
 #### Get question by value
 
 ```http
-  GET /api/items/getQuestionByValue/{value}
+  GET /api/csv/v1/getQuestionByValue/{value}
 ```
 
 | Parameter | Type     | Description                       |
@@ -52,7 +52,7 @@ After using a POST request to upload these CSV users can then search via monetar
 #### Get question by category
 
 ```http
-  GET /api/items/getQuestionByCategory/{category}
+  GET /api/csv/v1/getQuestionByCategory/{category}
 ```
 
 | Parameter | Type     | Description                       |
@@ -62,7 +62,7 @@ After using a POST request to upload these CSV users can then search via monetar
 #### Get question by round
 
 ```http
-  GET /api/items/getQuestionByRound/{round}
+  GET /api/csv/v1/getQuestionByRound/{round}
 ```
 
 | Parameter | Type     | Description                       |
@@ -72,7 +72,7 @@ After using a POST request to upload these CSV users can then search via monetar
 #### Get question by round and category
 
 ```http
-  GET /api/items/getQuestionByRoundAndCategory/{round}/{category}
+  GET /api/csv/v1/getQuestionByRoundAndCategory/{round}/{category}
 ```
 
 | Parameter | Type     | Description                       |
@@ -82,7 +82,7 @@ After using a POST request to upload these CSV users can then search via monetar
 #### Delete question by ID
 
 ```http
-  DELETE /api/items/deleteById/{id}
+  DELETE /api/csv/v1/deleteById/{id}
 ```
 
 | Parameter | Type     | Description                       |
@@ -92,7 +92,7 @@ After using a POST request to upload these CSV users can then search via monetar
 #### Add a question
 
 ```http
-  POST /api/items/addQuestion
+  POST /api/csv/v1/addQuestion
 ```
 
 | Parameter | Type     | Description                       |
