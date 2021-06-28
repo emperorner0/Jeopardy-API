@@ -1,5 +1,5 @@
 
-# Jeopardy Question Search API
+# Jeopardy! Question Search REST API
 
 A simple REST API that allows a user to upload a CSV of Jeopardy questions.
 
