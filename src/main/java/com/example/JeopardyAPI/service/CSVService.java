@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.transaction.Transactional;
 import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
@@ -53,6 +52,12 @@ public class CSVService {
         return repository.findAll().stream()
                 .filter(s->s.getRound().toUpperCase(Locale.ROOT).contains(round.toUpperCase(Locale.ROOT)))
                 .filter(s->s.getCategory().toUpperCase(Locale.ROOT).contains(category.toUpperCase(Locale.ROOT)))
+                .collect(Collectors.toList());
+    }
+
+    public List<Question> getQuestionById(Long id){
+        return repository.findAll().stream()
+                .filter(s->s.getId().equals(id))
                 .collect(Collectors.toList());
     }
 

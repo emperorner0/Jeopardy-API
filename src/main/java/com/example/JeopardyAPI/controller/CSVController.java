@@ -11,9 +11,10 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
+import java.util.LongSummaryStatistics;
 
 @Controller
-@RequestMapping(value = "/api/csv", method = {RequestMethod.GET, RequestMethod.POST, RequestMethod.POST,
+@RequestMapping(value = "/api/csv/v1", method = {RequestMethod.GET, RequestMethod.POST, RequestMethod.POST,
         RequestMethod.DELETE})
 public class CSVController {
 
@@ -132,6 +133,19 @@ public class CSVController {
         } catch (Exception e){
             String response2 = "Unable to Add Question";
             return new ResponseEntity<String>(response2, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+    @GetMapping("/getQuestionById/{id}")
+    public ResponseEntity<List<Question>> getQuestionById(@PathVariable int id){
+        try {
+            List<Question> questions = fileService.getQuestionById(Long.valueOf(id));
+
+            if (questions.isEmpty()) {
+                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            }
+            return new ResponseEntity<List<Question>>(questions, HttpStatus.OK);
+        } catch (Exception e){
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 }
