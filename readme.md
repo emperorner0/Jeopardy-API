@@ -3,7 +3,7 @@
 
 A simple REST API that allows a user to upload a CSV of Jeopardy questions.
 
-After using a POST request to upload these CSV you can then search via monetary value of the question, category of the question, round of Jeopardy in which the question was asked, and finally by round and category. All of these are provided through GET requests mapped within the API. Finally the user is able to delete questions by ID by using a DELETE request, and add a question using the body of a POST request and a simple Question object.
+After using a POST request to upload these CSV users can then search via monetary value of the question, category of the question, round of Jeopardy in which the question was asked, and finally by round and category. All of these are provided through GET requests mapped within the API. Finally the user is able to delete questions by ID by using a DELETE request, and add a question using the body of a POST request and a simple Question object.
 
 
 
